@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Compound Calculator</string>
+    <string name="principal">Principal $</string>
+    <string name="interest_rate">Interest Rate %</string>
+    <string name="duration">Duration</string>
+    <string name="compound_interval">Compound Interval</string>
+    <string name="press_for_more"><u>Press For More...</u></string>
+    <string-array name="compoundInterval">
+        <item>Yearly</item>
+        <item>Half-Yearly</item>
+        <item>Quarterly</item>
+        <item>Monthly</item>
+        <item>Daily</item>
+    </string-array>
+    <string-array name="duration">
+        <item>Years</item>
+        <item>Months</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

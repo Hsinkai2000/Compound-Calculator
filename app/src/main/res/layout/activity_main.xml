@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/compoundInformation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:background="@color/colorSecondaryDark"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final Balance: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="35dp" />
+
+            <TextView
+                android:id="@+id/finalBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="35dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:layout_weight="4.5"
+                android:text="Base Amount : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/baseAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:gravity="right"
+                android:text="Interest Rate : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/interestRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.5"
+                android:text="Effective Annual Rate : "
+                android:gravity="right"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/effectiveAnuual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Calculation Period: "
+                android:layout_weight="7"
+                android:gravity="right"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/calculationPeriod"
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="0 years"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/pressToList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/press_for_more"
+                android:textColor="@color/colorPrimary"
+                android:visibility="invisible"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        tools:ignore="ExtraText">
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/ETPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/principal"
+            app:met_floatingLabelText="Principal $:"
+            app:met_floatingLabel="highlight"
+            android:paddingBottom="5dp"
+            />
+        />
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/ETInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/interest_rate"
+            app:met_floatingLabelText="Interest Rate %:"
+            app:met_floatingLabel="highlight"
+            android:paddingBottom="10dp"/>
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/compound_interval"
+                android:textSize="15dp"
+                android:layout_weight="8"
+                />
+            <Spinner
+                android:id="@+id/compoundSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:spinnerMode="dropdown"
+                android:layout_margin="5dp"
+                android:background="@color/colorSecondary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textSize="15dp"
+                android:layout_weight="7"
+                />
+            <TextView
+                android:id="@+id/durationNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="1"
+                android:textSize="15dp" />
+            <Spinner
+                android:id="@+id/durationSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:spinnerMode="dropdown"
+                android:layout_margin="5dp"
+                android:background="@color/colorSecondary"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <com.appyvet.materialrangebar.RangeBar
+                android:id="@+id/durationSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrb_rangeBar="false"
+                app:mrb_pinMaxFont="15sp"
+                app:mrb_pinMinFont="12sp"
+                app:mrb_rangeBarPaddingBottom="20dp"
+                app:mrb_selectorBoundaryColor="@color/colorAccent"
+                app:mrb_selectorBoundarySize="2dp"
+                app:mrb_pinTextColor="@color/colorPrimaryDark"
+                app:mrb_temporaryPins="true"
+                app:mrb_selectorSize="10dp"
+                app:mrb_tickEnd="50"
+                app:mrb_tickInterval="1"
+                app:mrb_tickStart="1"
+                app:mrb_pinRadius="14dp"
+                app:mrb_rangeBar_rounded="true"
+                app:mrb_pinColor="#6c3f6a"/>
+
+
+        </LinearLayout>
+
+        <com.dd.processbutton.FlatButton
+            android:id="@+id/buttonCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            custom:pb_colorNormal="@color/colorSecondary"
+            custom:pb_colorPressed="@color/colorSecondaryDark" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
